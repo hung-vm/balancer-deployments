@@ -38,6 +38,30 @@ import { findContractSourceName, getAllFullyQualifiedNames } from './buildinfo';
 
 const MAX_VERIFICATION_INTENTS = 3;
 
+chainConfig.oasys = {
+  chainId: 248,
+  urls: {
+    apiURL: 'https://explorer.oasys.games/api',
+    browserURL: 'https://explorer.oasys.games',
+  },
+};
+
+chainConfig.defiverse = {
+  chainId: 16116,
+  urls: {
+    apiURL: 'https://scan.defi-verse.org/api',
+    browserURL: 'https://scan.defi-verse.org',
+  },
+};
+
+chainConfig['defiverse-testnet'] = {
+  chainId: 17117,
+  urls: {
+    apiURL: 'https://scan-testnet.defi-verse.org/api',
+    browserURL: 'https://scan-testnet.defi-verse.org',
+  },
+};
+
 export default class Verifier {
   apiKey: string;
   network: Network;

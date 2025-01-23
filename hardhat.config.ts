@@ -47,7 +47,8 @@ task('deploy', 'Run deployment task')
 
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const apiKey = args.key ?? (hre.config.networks[hre.network.name] as any).verificationAPIKey;
-      const verifier = apiKey ? new Verifier(hre.network, apiKey) : undefined;
+      // const verifier = apiKey ? new Verifier(hre.network, apiKey) : undefined;
+      const verifier = new Verifier(hre.network, apiKey || 'no key');
       await new Task(args.id, TaskMode.LIVE, hre.network.name, verifier).run(args);
     }
   );

@@ -13,7 +13,7 @@ export default async (task: Task, { force, from }: TaskRunOptions = {}): Promise
   const args = [input.Vault, input.ProtocolFeePercentagesProvider, input.FactoryVersion, input.PoolVersion];
   const factory = await task.deployAndVerify('WeightedPoolFactory', args, from, force);
 
-  if (task.mode === TaskMode.LIVE) {
+  /*if (task.mode === TaskMode.LIVE) {
     // We also create a Pool using the factory and verify it, to let us compute their action IDs and so that future
     // Pools are automatically verified. We however don't run any of this code in CHECK mode, since we don't care about
     // the contracts deployed here. The action IDs will be checked to be correct via a different mechanism.
@@ -88,5 +88,5 @@ export default async (task: Task, { force, from }: TaskRunOptions = {}): Promise
       mockPoolArgs.owner,
       mockPoolArgs.version,
     ]);
-  }
+  }*/
 };

@@ -45,6 +45,18 @@ if (process.env.CI) {
       },
       "mode": {
         "url": "${process.env.MODE_RPC_ENDPOINT}"
+      },
+      "defiverse": {        
+        "url": "https://rpc.defi-verse.org/"
+      },
+      "defiverse-testnet": {        
+        "url": "https://rpc-testnet.defi-verse.org/"
+      },
+      "oasys": {        
+        "url": "https://rpc.mainnet.oasys.games"
+      },
+      "oasys-testnet": {        
+        "url": "https://rpc.testnet.oasys.games"
       }
     },
     "defaultConfig": {

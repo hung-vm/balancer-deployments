@@ -17,7 +17,11 @@ export const NETWORKS = [
   'sepolia',
   'base',
   'fraxtal',
-  'mode',
+  'mode',  
+  'defiverse',
+  'defiverse-testnet',
+  'oasys',
+  'oasys-testnet',
 ];
 
 export type Network = (typeof NETWORKS)[number];
